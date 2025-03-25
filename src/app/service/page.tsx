@@ -2,7 +2,7 @@ import Link from 'next/link';
 import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 import TypingEffect from '../components/typing_effect';
-import prayer from '../../public/prayer.png';
+import prayer from '../../../public/prayer.png';
 import Image from 'next/image';
 import { Metadata } from 'next';
 

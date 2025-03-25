@@ -3,7 +3,7 @@ import NavBar from '../components/navbar';
 import Footer from '../components/footer';
 import TypingEffect from '../components/typing_effect';
 import { Button } from '@/components/ui/button';
-import prayer from '../../public/prayer.png';
+import prayer from '../../../public/prayer.png';
 import Image from 'next/image';
 import { Metadata } from 'next';
 
