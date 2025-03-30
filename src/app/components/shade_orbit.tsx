@@ -9,7 +9,7 @@ export default function ShadeOrbitContainer({
 		'transparent',
 		'transparent',
 		'transparent',
-		'hsl(var(--primary))',
+		'var(--primary)',
 		'transparent',
 		'transparent',
 	],

@@ -21,7 +21,7 @@ export default function NavBar({ active }: { active?: number }) {
 						<p
 							className='text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-800 gradient-text'
 							style={{ textShadow: '0 0 10px rgba(255,255,255,0.1)' }}>
-							Sai Lin Htut 📌
+							Sai Lin Htut
 						</p>
 					</Link>
 					<div className='flex flex-row justify-center items-center gap-5'>

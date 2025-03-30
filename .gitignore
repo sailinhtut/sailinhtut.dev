@@ -14,11 +14,12 @@
 /coverage
 
 # next.js
-/.next/
+/.next/*
 /out/
 
 # production
-# /build
+/build
+/dependencies
 
 # misc
 .DS_Store

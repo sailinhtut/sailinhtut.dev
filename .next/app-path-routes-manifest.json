@@ -1,6 +1,8 @@
 {
+  "/api/users/route": "/api/users",
+  "/api/users/[id]/route": "/api/users/[id]",
   "/_not-found/page": "/_not-found",
+  "/service/page": "/service",
   "/page": "/",
-  "/contact/page": "/contact",
-  "/service/page": "/service"
+  "/contact/page": "/contact"
 }
