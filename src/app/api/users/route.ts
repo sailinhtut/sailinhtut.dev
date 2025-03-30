@@ -9,7 +9,10 @@ export async function POST(req: Request) {
 		const result = await db.insert(users).values({ name, age, email });
 		return NextResponse.json(result);
 	} catch (error) {
-		return NextResponse.error();
+		return NextResponse.json({
+			message: 'Unexpected Error Occured',
+			data: JSON.stringify(error),
+		});
 	}
 }
 
@@ -18,6 +21,10 @@ export async function GET() {
 		const result = await db.select().from(users);
 		return NextResponse.json(result);
 	} catch (error) {
-		return NextResponse.error();
+		// return NextResponse.error();
+		return NextResponse.json({
+			message: 'Unexpected Error Occured',
+			data: JSON.stringify(error),
+		});
 	}
 }
