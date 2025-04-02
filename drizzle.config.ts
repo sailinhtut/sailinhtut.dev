@@ -8,7 +8,7 @@ export default defineConfig({
 	dbCredentials: {
 		host: 'localhost',
 		port: 3306,
-		user: 'root',
+		user: 'sailinhtut',
 		password:'Saphire234!@#',
 		database: 'drizzle',
 	},
