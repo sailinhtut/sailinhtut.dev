@@ -10,8 +10,8 @@ I'm always open to meaningful conversations, collaborations, and friendships. If
 
 
 ## 📞 Contact Me
-**Phone**: [+95 9 252 220 3838](tel:+959252203838)  
-**Email**: sailinhtut76062@gmail.com  
+**Phone**: [+959 252 220 3838](tel:+959252203838)  
+**Email**: sailinhtut76062@gmail.com(mailto:sailinhtut76062@gmail.com) 
 **Telegram**: [Send Message Now](https://t.me/sailinhtut)  
 **Location**: Yangon, Myanmar (Burma)  
 **Timezone**: UTC+6:30
