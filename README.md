@@ -1,22 +1,18 @@
-## Sai Lin Htut Personal Portfolio
+# Sai Lin Htut — Personal Portfolio
 
-This is my portfolio website built with Next JS and Mongo DB. The website includes my projects
-showcases, skills and experiences, blogs on various frameworks and case studies.
+Welcome to my personal portfolio, built using **Next.js** and **MongoDB**. This site showcases my work — from software projects and technical blogs to case studies and professional experiences.
 
-If you are interested in discussing and making friend with me, I am always ready to work with you
-and feeling thankful for great corporation.
+I specialize in building innovative and scalable software solutions that help businesses **optimize operations** and **maximize revenue**. With a strong command of modern tech stacks and cloud infrastructure, I aim to deliver efficient, high-performance systems.
 
-I can develop blend of software packages which can optimize business opertaion and bring best
-potential revenues using varius tech stack and cloud solutions.
+I'm always open to meaningful conversations, collaborations, and friendships. If you have **big dreams** and are looking for someone to help bring them to life — let’s connect.
 
-We can be friend if your would like me to enter your fantanstic big dreams. To learn more detail,
-please visit [https://sailinhtut.dev](https://sailinhtut.dev).
+🌐 Visit: [sailinhtut.dev](https://sailinhtut.dev)
 
-### Contact Me ?
 
-Phone: [+959 252 220 3838](tel:+959252203838)<br>
-Email: [contact@sailinhtut.dev](mailto:contact@sailinhtut.dev), sailinhtut76062@gmail.com<br>
-Telegram: [Send Message](https://t.me/@sailinhtut)<br>
-Address: Yangon, Myanmar (Burma) <br>
-Timezone: UTC+6:30
+## 📞 Contact Me
+**Phone**: [+95 9 252 220 3838](tel:+959252203838)  
+**Email**: [contact@sailinhtut.dev](mailto:contact@sailinhtut.dev), sailinhtut76062@gmail.com  
+**Telegram**: [Send me a message](https://t.me/@sailinhtut)  
+**Location**: Yangon, Myanmar (Burma)  
+**Timezone**: UTC+6:30
 
