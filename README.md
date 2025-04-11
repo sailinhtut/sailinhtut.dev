@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Sai Lin Htut Personal Portfolio
 
-## Getting Started
+This is my portfolio website built with Next JS and Mongo DB. The website includes my projects
+showcases, skills and experiences, blogs on various frameworks and case studies.
 
-First, run the development server:
+If you are interested in discussing and making friend with me, I am always ready to work with you
+and feeling thankful for great corporation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I can develop blend of software packages which can optimize business opertaion and bring best
+potential revenues using varius tech stack and cloud solutions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+We can be friend if your would like me to enter your fantanstic big dreams. To learn more detail,
+please visit [https://sailinhtut.dev](https://sailinhtut.dev).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Contact Me ?
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Phone: [+959 252 220 3838](tel:+959252203838)<br>
+Email: [contact@sailinhtut.dev](mailto:contact@sailinhtut.dev), sailinhtut76062@gmail.com<br>
+Telegram: [Send Message](https://t.me/@sailinhtut)<br>
+Address: Yangon, Myanmar (Burma) <br>
+Timezone: UTC+6:30
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

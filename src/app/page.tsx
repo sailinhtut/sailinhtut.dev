@@ -6,7 +6,6 @@ import HomeSectionOne from './section_one';
 import HomeSectionTwo from './section_two';
 import HomeSectionThree from './section_three';
 import HomeSectionFour from './section_four';
-import HomeSectionFive from './section_five';
 
 export const metadata: Metadata = {
 	title: 'Sai Lin Htut',
