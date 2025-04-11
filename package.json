@@ -6,7 +6,6 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
 		"server": "node server.js",
 		"export": "exporter.bat"
 	},
@@ -43,7 +42,6 @@
 		"cmdk": "^1.1.1",
 		"date-fns": "^3.6.0",
 		"dotenv": "^16.4.7",
-		"drizzle-orm": "^0.41.0",
 		"embla-carousel-react": "^8.5.2",
 		"framer-motion": "^12.5.0",
 		"input-otp": "^1.4.2",
@@ -70,7 +68,6 @@
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
-		"drizzle-kit": "^0.30.5",
 		"eslint": "^9",
 		"eslint-config-next": "15.2.4",
 		"tailwindcss": "^4",

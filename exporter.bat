@@ -26,10 +26,10 @@ rmdir /S /Q build\node_modules
 xcopy .next\standalone\node_modules dependencies /E /H /I /Q
 
 :: Create build.zip from the contents inside the build folder (no folder structure)
-7z a build.zip .\build\*
+7z a .\dist\build.zip .\build\*
 
 :: Create dependencies.zip from the contents inside the dependencies folder (no folder structure)
-7z a dependencies.zip .\dependencies\*
+7z a .\dist\dependencies.zip .\dependencies\*
 
 
 rmdir /S /Q build
