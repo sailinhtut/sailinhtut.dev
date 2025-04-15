@@ -1,5 +1,5 @@
+<img src="https://sailinhtut.dev/burma.png" alt="Alt text" width="200" height="200"><br>
 # Sai Lin Htut — Personal Portfolio
-
 Welcome to my personal portfolio, built using **Next.js** and **MongoDB**. This site showcases my work — from software projects and technical blogs to case studies and professional experiences.
 
 I specialize in building innovative and scalable software solutions that help businesses **optimize operations** and **maximize revenue**. With a strong command of modern tech stacks and cloud infrastructure, I aim to deliver efficient, high-performance systems.
