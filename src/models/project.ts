@@ -10,6 +10,7 @@ const ProjectSchema = new Schema(
 		],
 		title: { type: String, required: true },
 		description: { type: String },
+		content: { type: String },
 		githubUrl: { type: String, required: true },
 		tags: [{ type: String }],
 		createdAt: { type: Date, default: Date.now },

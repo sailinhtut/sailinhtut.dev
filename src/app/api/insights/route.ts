@@ -1,7 +1,6 @@
-import { Project } from '@/models/project';
+import { Insight } from '@/models/insight'; // Make sure you have this file
 import { connectToDatabase } from '@/services/database';
 import { NextRequest, NextResponse } from 'next/server';
-import { Types } from 'mongoose';
 
 export async function GET(req: NextRequest) {
 	try {
@@ -12,19 +11,19 @@ export async function GET(req: NextRequest) {
 		const limit = parseInt(searchParams.get('limit') || '10', 10);
 		const skip = (page - 1) * limit;
 
-		const total = await Project.countDocuments();
+		const total = await Insight.countDocuments();
 		const totalPages = Math.ceil(total / limit);
 
-		const projects = await Project.find({}).sort({ createdAt: -1 }).skip(skip).limit(limit);
+		const insights = await Insight.find({}).sort({ created_at: -1 }).skip(skip).limit(limit);
 
 		return NextResponse.json({
 			success: true,
 			page,
 			totalPages,
-			projects,
+			insights,
 		});
 	} catch (error) {
-		console.error('GET /api/projects error:', error);
+		console.error('GET /api/insights error:', error);
 		return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
 	}
 }
@@ -33,18 +32,20 @@ export async function POST(req: Request) {
 	try {
 		const body = await req.json();
 
-		// Validate required fields
+		// Validation
 		const errors: string[] = [];
 		if (!body.title || typeof body.title !== 'string') errors.push('Title is required.');
 		if (!body.description || typeof body.description !== 'string')
 			errors.push('Description is required.');
-		if (!body.githubUrl || typeof body.githubUrl !== 'string')
-			errors.push('GitHub URL is required.');
-		if (body.preview_images && !Array.isArray(body.preview_images))
-			errors.push('Preview images must be an array.');
+		if (!body.content || typeof body.content !== 'string')
+			errors.push('Content is required.');
+		if (!body.writer || typeof body.writer !== 'string') errors.push('Writer is required.');
 		if (body.tags && !Array.isArray(body.tags)) errors.push('Tags must be an array.');
+		if (body.heading_image_url && typeof body.heading_image_url !== 'string')
+			errors.push('Heading image URL must be a string.');
 
 		if (errors.length > 0) {
+			console.log(errors);
 			return NextResponse.json(
 				{ error: 'Validation failed', details: errors },
 				{ status: 400 }
@@ -52,10 +53,14 @@ export async function POST(req: Request) {
 		}
 
 		await connectToDatabase();
-		const project = await Project.create(body);
-		return NextResponse.json(project, { status: 201 });
+		const newInsight = await Insight.create({
+			...body,
+			view_count: 0, // start from 0 by default
+		});
+
+		return NextResponse.json(newInsight, { status: 201 });
 	} catch (error: any) {
-		console.error('POST /api/projects error:', error);
+		console.error('POST /api/insights error:', error);
 		if (error.name === 'ValidationError') {
 			const details = Object.values(error.errors).map((e: any) => e.message);
 			return NextResponse.json({ error: 'Validation failed', details }, { status: 422 });

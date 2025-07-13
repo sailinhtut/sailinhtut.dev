@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
@@ -8,6 +9,8 @@ import { Button } from '@/components/shadcn/components/ui/button';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { X } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import { markdownComponents } from '@/components/markdown_style';
 
 export default function ProjectDetail({ id }: { id: string }) {
 	const [project, setProject] = useState<any>(null);
@@ -35,11 +38,11 @@ export default function ProjectDetail({ id }: { id: string }) {
 	}, [id]);
 
 	const downloadLinks = [
-		{ key: 'androidUrl', label: 'Android' },
-		{ key: 'iOSUrl', label: 'iOS' },
-		{ key: 'windowUrl', label: 'Windows' },
-		{ key: 'linuxUrl', label: 'Linux' },
-		{ key: 'macUrl', label: 'macOS' },
+		{ key: 'androidUrl', label: 'Android Version' },
+		{ key: 'iOSUrl', label: 'iOS Version' },
+		{ key: 'windowUrl', label: 'Window Version' },
+		{ key: 'linuxUrl', label: 'Linux Version' },
+		{ key: 'macUrl', label: 'macOS Version' },
 	];
 
 	return (
@@ -60,23 +63,19 @@ export default function ProjectDetail({ id }: { id: string }) {
 					<>
 						<h1 className='text-3xl font-bold text-left'>{project.title}</h1>
 
-						{/* <p className='text-white/80 leading-relaxed text-justify'>
-							{project.description}
-						</p> */}
-						<div
-							className='text-white/80 leading-relaxed text-justify'
-							dangerouslySetInnerHTML={{ __html: project.description }}
-						/>
-
 						<div className='flex flex-wrap gap-2 justify-start text-left'>
 							{project.tags?.map((tag: string) => (
 								<span
 									key={tag}
 									className='px-2 py-1 bg-primary/20 border-primary text-sm rounded-md cursor-default'>
-									#{tag}
+									{tag}
 								</span>
 							))}
 						</div>
+
+						<ReactMarkdown components={markdownComponents}>
+							{project.content}
+						</ReactMarkdown>
 
 						{/* Preview Images */}
 						{project.preview_images?.length > 0 && (

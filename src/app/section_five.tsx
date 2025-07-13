@@ -33,9 +33,9 @@ export default function ProjectPreviewSection() {
 	useEffect(() => {
 		const fetchProjects = async () => {
 			try {
-				const res = await fetch('/api/projects');
+				const res = await fetch('/api/projects?page=1');
 				if (!res.ok) throw new Error('Failed to fetch');
-				const data = await res.json();
+				const data = (await res.json()).projects ?? [];
 				setProjects(data.slice(0, 5));
 			} catch {
 				setProjects([]);

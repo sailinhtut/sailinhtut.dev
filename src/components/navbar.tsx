@@ -26,26 +26,26 @@ export default function NavBar({ active }: { active?: number }) {
 					</Link>
 					<div className='flex flex-row justify-center items-center gap-5'>
 						<a href='https://github.com/sailinhtut' target='_blank'>
-							<Github size={20} className='text-white hover:text-blue-500' />
+							<Github size={20} className='text-white hover:text-primary' />
 						</a>
 						<Link
 							href='/insights'
-							className={`hidden md:block hover:text-blue-500 ${
-								active === 1 ? 'text-blue-500' : 'text-white'
+							className={`hidden md:block hover:text-primary ${
+								active === 1 ? 'text-primary' : 'text-white'
 							}`}>
 							Insights
 						</Link>
 						<Link
 							href='/projects'
-							className={`hidden md:block  hover:text-blue-500 ${
-								active === 2 ? 'text-blue-500' : 'text-white'
+							className={`hidden md:block  hover:text-primary ${
+								active === 2 ? 'text-primary' : 'text-white'
 							}`}>
 							Projects
 						</Link>
 						<Link
 							href='/services'
-							className={`hidden md:block  hover:text-blue-500 ${
-								active === 3 ? 'text-blue-500' : 'text-white'
+							className={`hidden md:block  hover:text-primary ${
+								active === 3 ? 'text-primary' : 'text-white'
 							}`}>
 							Services
 						</Link>
@@ -67,7 +67,7 @@ export default function NavBar({ active }: { active?: number }) {
 					<Link href='/insights'>
 						<p
 							className={`px-3 py-3 ${
-								active == 1 ? 'text-blue-500' : 'text-white'
+								active == 1 ? 'text-primary' : 'text-white'
 							}`}>
 							Insights
 						</p>
@@ -75,7 +75,7 @@ export default function NavBar({ active }: { active?: number }) {
 					<Link href='/projects'>
 						<p
 							className={`px-3 py-3 ${
-								active == 2 ? 'text-blue-500' : 'text-white'
+								active == 2 ? 'text-primary' : 'text-white'
 							}`}>
 							Projects
 						</p>
@@ -83,7 +83,7 @@ export default function NavBar({ active }: { active?: number }) {
 					<Link href='/services'>
 						<p
 							className={`px-3 py-3 ${
-								active == 3 ? 'text-blue-500' : 'text-white'
+								active == 3 ? 'text-primary' : 'text-white'
 							}`}>
 							Services
 						</p>

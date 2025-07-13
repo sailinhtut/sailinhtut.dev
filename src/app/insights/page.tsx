@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -10,9 +11,9 @@ import Footer from '@/components/footer';
 import { markdownComponents } from '@/components/markdown_style';
 import ReactMarkdown from 'react-markdown';
 
-export default function ProjectsPage() {
-	const [projects, setProjects] = useState<any[]>([]);
-	const [filteredProjects, setFilteredProjects] = useState<any[]>([]);
+export default function InsightsPage() {
+	const [insights, setInsights] = useState<any[]>([]);
+	const [filteredInsights, setFilteredInsights] = useState<any[]>([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState('');
 	const [search, setSearch] = useState('');
@@ -20,13 +21,13 @@ export default function ProjectsPage() {
 	const [page, setPage] = useState(1);
 	const [totalPages, setTotalPages] = useState(1);
 
-	const fetchProjects = async (page: number) => {
+	const fetchInsights = async (page: number) => {
 		setLoading(true);
 		try {
-			const res = await fetch(`/api/projects?page=${page}`);
-			if (!res.ok) throw new Error('Failed to fetch projects');
+			const res = await fetch(`/api/insights?page=${page}`);
+			if (!res.ok) throw new Error('Failed to fetch insights');
 			const data = await res.json();
-			setProjects(data.projects);
+			setInsights(data.insights);
 			setTotalPages(data.totalPages);
 		} catch (err: any) {
 			setError(err.message || 'Something went wrong');
@@ -36,34 +37,34 @@ export default function ProjectsPage() {
 	};
 
 	useEffect(() => {
-		fetchProjects(page);
+		fetchInsights(page);
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}, [page]);
 
 	useEffect(() => {
-		let filtered = [...projects];
+		let filtered = [...insights];
 		if (search) {
-			filtered = filtered.filter((p) =>
-				(p.title + p.description).toLowerCase().includes(search.toLowerCase())
+			filtered = filtered.filter((i) =>
+				(i.title + i.content).toLowerCase().includes(search.toLowerCase())
 			);
 		}
 		if (selectedTag) {
-			filtered = filtered.filter((p) => p.tags?.includes(selectedTag));
+			filtered = filtered.filter((i) => i.tags?.includes(selectedTag));
 		}
-		setFilteredProjects(filtered);
-	}, [search, selectedTag, projects]);
+		setFilteredInsights(filtered);
+	}, [search, selectedTag, insights]);
 
-	const allTags = Array.from(new Set(projects.flatMap((p) => p.tags || []))).sort();
+	const allTags = Array.from(new Set(insights.flatMap((i) => i.tags || []))).sort();
 
 	return (
 		<div>
-			<NavBar active={2} />
+			<NavBar active={1} />
 			<div className='min-h-screen space-y-4'>
 				<div className='w-full pt-[60px] sticky px-5 bg-background top-0 z-30 space-y-4 pb-3'>
 					<div className='flex flex-col sm:flex-row sm:items-center gap-3'>
 						<Input
 							type='text'
-							placeholder='Search projects...'
+							placeholder='Search insights...'
 							className='w-full sm:w-1/2'
 							value={search}
 							onChange={(e) => setSearch(e.target.value)}
@@ -78,7 +79,6 @@ export default function ProjectsPage() {
 							</Button>
 						)}
 					</div>
-
 					<div className='flex flex-wrap gap-2'>
 						{allTags.map((tag) => (
 							<Button
@@ -92,30 +92,31 @@ export default function ProjectsPage() {
 					</div>
 				</div>
 
-				{loading && <p className='p-5'>Loading projects...</p>}
-
+				{loading && <p className='p-5'>Loading insights...</p>}
 				{error && <p className='text-red-500 p-5'>Error: {error}</p>}
 
 				{!loading && (
 					<>
-						<div className='p-3 md:p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-							{filteredProjects.map((project) => (
-								<Link key={project._id} href={`/projects/${project._id}`}>
-									<Card
-										className='
-										bg-white/5 text-white transition-all duration-300 ease-in-out
-										hover:scale-[1.03] hover:shadow-lg hover:bg-white/10 cursor-pointer py-3'>
+						<div className='p-3 md:p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-start justify-start'>
+							{filteredInsights.map((insight) => (
+								<Link key={insight._id} href={`/insights/${insight._id}`}>
+									<Card className='bg-white/5 text-white transition-all duration-300 ease-in-out hover:scale-[1.03] hover:shadow-lg hover:bg-white/10 cursor-pointer py-5 '>
 										<CardContent className='p-5 space-y-3 py-0'>
-											<p className='text-lg md:text-xl font-semibold'>
-												{project.title}
+											<img
+												src={insight.heading_image_url}
+												alt={insight.title}
+												className='w-full h-[130px] object-cover'
+											/>
+											<p className='text-lg md:text-2xl font-semibold'>
+												{insight.title}
 											</p>
 											<div className='h-[180px] flex flex-col justify-center'>
-												<p className='text-sm opacity-70 line-clamp-3'>
-													{project.description}
-												</p>
+												<div className='text-sm line-clamp-3 min-h-[60px]'>
+													{insight.description}
+												</div>
 												<div>
-													<div className='mt-2 flex flex-wrap gap-2 items-center mb-2'>
-														{project.tags?.map(
+													<div className='max-h-[70px] overflow-hidden mt-3 flex flex-wrap gap-2 items-center mb-3'>
+														{insight.tags?.map(
 															(tag: string) => (
 																<span
 																	key={tag}
@@ -126,11 +127,9 @@ export default function ProjectsPage() {
 														)}
 													</div>
 													<Link
-														href={project.githubUrl}
+														href={`/insights/${insight.id}`}
 														target='_blank'>
-														<Button>
-															View on GitHub
-														</Button>
+														<Button>Read More</Button>
 													</Link>
 												</div>
 											</div>
@@ -139,8 +138,6 @@ export default function ProjectsPage() {
 								</Link>
 							))}
 						</div>
-
-						{/* Pagination */}
 						<div className='my-5 flex justify-center items-center gap-2 mt-5'>
 							<Button
 								variant='outline'

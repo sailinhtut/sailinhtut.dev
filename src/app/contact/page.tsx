@@ -13,8 +13,6 @@ import NavBar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Image from 'next/image';
 
-
-
 export default function ContactPage() {
 	const [form, setForm] = useState({ name: '', email: '', message: '' });
 	const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
@@ -70,7 +68,13 @@ export default function ContactPage() {
 						<Button type='submit' disabled={status === 'sending'}>
 							{status === 'sending' ? 'Sending...' : 'Send Message'}
 						</Button>
-						{status === 'sent' && <p className='text-green-500 text-sm'>Message sent ! Thank for your interest ! I will reply you as quick as possible. If you need hurry, direct contact me from social media platforms shown right side.</p>}
+						{status === 'sent' && (
+							<p className='text-green-500 text-sm'>
+								Message sent ! Thank for your interest ! I will reply you as
+								quick as possible. If you need hurry, direct contact me from
+								social media platforms shown right side.
+							</p>
+						)}
 						{status === 'error' && (
 							<p className='text-red-500'>Something went wrong.</p>
 						)}
@@ -78,7 +82,7 @@ export default function ContactPage() {
 
 					<div className='space-y-4'>
 						<div>
-							<h2 className='text-lg font-semibold mb-1'>Contact Info</h2>
+							<p className='text-lg font-semibold mb-1'>Contact Info</p>
 							<p>
 								Email:{' '}
 								<a

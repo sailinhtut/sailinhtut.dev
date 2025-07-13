@@ -54,7 +54,7 @@
 	--secondary-foreground: oklch(0.205 0 0);
 	--muted: oklch(0.32 0.04 270);
 	--muted-foreground: oklch(0.556 0 0);
-	--accent: 	oklch(0.58 0.2 330);
+	--accent: oklch(0.58 0.2 330);
 	--accent-foreground: oklch(0.98 0.03 330);
 	--destructive: oklch(0.577 0.245 27.325);
 	--destructive-foreground: oklch(0.975 0 0);
@@ -133,7 +133,6 @@
 	}
 }
 
-
 .fancy-link {
 	background: linear-gradient(to right, var(--primary), var(--primary));
 	background-position: 0% 100%;
@@ -179,3 +178,4 @@
 	scrollbar-width: thin; /* Firefox */
 	scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
+
