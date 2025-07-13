@@ -1,9 +1,8 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import TypingEffect from './components/typing_effect';
+import TypingEffect from '../components/typing_effect';
 import Image from 'next/image';
 
-import sailinhtut from '../../public/burma.png';
+// import sailinhtut from '../../public/sailinhtut.png';
 import webDev from '../../public/web_dev.png';
 import mobileDev from '../../public/mobile_dev.png';
 import desktopDev from '../../public/desktop_dev.png';
@@ -20,6 +19,7 @@ import laravel from '../../public/laravel.svg';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Button } from '@/components/shadcn/components/ui/button';
 
 export default function HomeSectionOne() {
 	const [contentIndex, setContentIndex] = useState(1);
@@ -35,8 +35,8 @@ export default function HomeSectionOne() {
 	};
 
 	return (
-		<section className='min-h-screen pt-[60px] text-white flex flex-col-reverse lg:flex-row justify-end'>
-			<div className='w-full lg:w-1/2 relative p-3'>
+		<section className='lg:min-h-screen pt-[60px] text-white flex flex-col-reverse lg:flex-row justify-end'>
+			<div className='w-full lg:w-1/2 relative p-3 '>
 				{contentIndex === 1 && (
 					<div className='w-auto lg:w-[500px] lg:absolute lg:bottom-1/3 lg:left-[100px] lg:text-xl text-normal mt-10'>
 						<motion.div
@@ -44,7 +44,7 @@ export default function HomeSectionOne() {
 							initial={{ opacity: 0, y: '100%' }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}>
-							<h2 className='text-lg lg:text-3xl mb-3 font-medium gradient-text'>
+							<h2 className='text-lg lg:text-3xl mb-3 font-medium  '>
 								Nice To Meet You
 							</h2>
 						</motion.div>
@@ -76,7 +76,7 @@ export default function HomeSectionOne() {
 							initial={{ opacity: 0, y: '100%' }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}></motion.div>
-						<h2 className='text-lg lg:text-3xl mb-3 font-medium gradient-text'>
+						<h2 className='text-lg lg:text-3xl mb-3 font-medium  '>
 							Mobile Application Development
 						</h2>
 
@@ -104,7 +104,7 @@ export default function HomeSectionOne() {
 							initial={{ opacity: 0, y: '100%' }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}>
-							<h2 className='text-lg lg:text-3xl mb-3 font-medium gradient-text'>
+							<h2 className='text-lg lg:text-3xl mb-3 font-medium  '>
 								Website and Web Application Development
 							</h2>
 						</motion.div>
@@ -133,7 +133,7 @@ export default function HomeSectionOne() {
 							initial={{ opacity: 0, y: '100%' }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.3, ease: 'easeInOut' }}>
-							<h2 className='text-lg lg:text-3xl mb-3 font-medium gradient-text'>
+							<h2 className='text-lg lg:text-3xl mb-3 font-medium  '>
 								Desktop Application Development
 							</h2>
 						</motion.div>
@@ -156,7 +156,7 @@ export default function HomeSectionOne() {
 					</div>
 				)}
 			</div>
-			<div className='w-full lg:w-1/2 relative p-3'>
+			<div className='w-full lg:w-1/2 relative p-3 '>
 				{contentIndex === 1 && (
 					<div className='mx-auto lg:absolute lg:top-32 lg:left-1/2 lg:-translate-x-1/2 lg:size-[300px] size-[200px] relative flex justify-center items-end mt-5 lg:mt-0 user-select-none'>
 						<div
@@ -169,9 +169,11 @@ export default function HomeSectionOne() {
 								animationDirection: 'reverse',
 							}}></div>
 						<Image
-							src={sailinhtut}
+							src='/sailinhtut.png'
 							alt='Sai Lin Htut'
-							className=' rounded-full lg:rounded-[60px] lg:border-2 border-none border:border lg:border-white/20  lg:w-[280px] lg:h-[300px]  w-[200px] h-[210px] relative hover:border-blue-500  '
+							width={200}
+							height={210}
+							className=' rounded-full lg:rounded-full lg:border-2 border-none border:border lg:border-white/20 lg:w-[280px] lg:h-[300px]  relative hover:border-blue-500  '
 						/>
 					</div>
 				)}

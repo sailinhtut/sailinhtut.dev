@@ -1,7 +1,8 @@
 'use client';
 import Link from 'next/link';
-import TypingEffect from './components/typing_effect';
+import TypingEffect from '../components/typing_effect';
 import { useState } from 'react';
+import { Button } from '@/components/shadcn/components/ui/button';
 
 export default function NotFoundPage() {
 	const motivationalQuotes = [
@@ -43,16 +44,16 @@ export default function NotFoundPage() {
 				} `}>
 				{motivation ?? ''}
 			</q>
-			<p className={`md:text-2xl text-gray-700 ${typed ? 'text-sm mt-3' : 'text-lg'}`}>
+			<p className={`md:text-2xl text-white/30 ${typed ? 'text-sm mt-3' : 'text-lg'}`}>
 				<TypingEffect text='404 | NOT FOUND' speed={30} onTyped={markedTyped} />
 			</p>
 
 			<Link
 				href='/'
-				className={`hover:underline text-primary overflow-hidden transition-all duration-300 ${
+				className={`mt-3 hover:underline text-primary overflow-hidden transition-all duration-300 ${
 					typed ? 'opacity-100' : 'opacity-0'
 				} `}>
-				Goto Home
+				<Button>Goto Home</Button>
 			</Link>
 		</div>
 	);

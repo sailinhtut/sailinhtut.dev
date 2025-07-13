@@ -1,11 +1,12 @@
-import Footer from './components/footer';
-import NavBar from './components/navbar';
+import Footer from '../components/footer';
+import NavBar from '../components/navbar';
 import { Metadata } from 'next';
-import MouseEffect from './components/mouse_effect';
+import MouseEffect from '../components/mouse_effect';
 import HomeSectionOne from './section_one';
 import HomeSectionTwo from './section_two';
 import HomeSectionThree from './section_three';
 import HomeSectionFour from './section_four';
+import ProjectPreviewSection from './section_five';
 
 export const metadata: Metadata = {
 	title: 'Sai Lin Htut',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 	keywords:
 		'software development,website development,web application development,mobile development,yangon,myanmar,hire developer,professional software developer',
 	icons: {
-		icon: 'https://sailinhtut.dev/favicon.svg',
+		icon: '/favicon.svg',
 	},
 	openGraph: {
 		title: 'Sai Lin Htut - Software Engineer',
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 		siteName: 'Sai Lin Htut',
 		images: [
 			{
-				url: 'https://sailinhtut.dev/burma.png',
+				url: '/sailinhtut.png',
 				width: 1200,
 				height: 630,
 				alt: 'Sai Lin Htut - Software Engineer',
@@ -39,7 +40,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
 	return (
 		<>
-			<MouseEffect />
 			<NavBar />
 
 			<main className='bg-background relative'>
@@ -50,8 +50,9 @@ export default function HomePage() {
 				<HomeSectionTwo />
 				<HomeSectionThree />
 				<HomeSectionFour />
+				<ProjectPreviewSection/>
 
-				{/* <HomeSectionFive /> */}
+			
 			</main>
 
 			<Footer />

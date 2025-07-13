@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/jsx-key */
 'use client';
 import { motion } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect,  useState } from 'react';
 
 import { TbDeviceDesktopAnalytics } from 'react-icons/tb';
 import { HiOutlineDevicePhoneMobile } from 'react-icons/hi2';
@@ -8,24 +10,12 @@ import { GiGraduateCap, GiWorld } from 'react-icons/gi';
 import { LuLanguages } from 'react-icons/lu';
 import { BiNetworkChart } from 'react-icons/bi';
 import { Bar, BarChart, CartesianGrid, Cell, LabelList, XAxis, YAxis } from 'recharts';
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from '@/components/ui/card';
-import {
-	ChartConfig,
-	ChartContainer,
-	ChartTooltip,
-	ChartTooltipContent,
-} from '@/components/ui/chart';
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts';
 
-import { ChevronDown, TrendingUp } from 'lucide-react';
-import { IconType } from 'react-icons/lib';
+import { ChevronDown } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/shadcn/components/ui/card';
+import { ChartConfig, ChartContainer, ChartTooltip } from '@/components/shadcn/components/ui/chart';
+
 
 export default function HomeSectionFour() {
 	const webDevelopmentChartData = [
@@ -60,25 +50,23 @@ export default function HomeSectionFour() {
 		{ skill: 'Python Tkinter and QT', experience: 0.3 },
 	];
 	const educationChartData = [
-		{ skill: 'IGCSE 0 Level', experience: 1 },
-		{ skill: 'Attending Diploma of Computer Secience', experience: 1 },
+		{ skill: 'IGCSE (1 Distinction)', experience: 1 },
+		{ skill: 'Diploma of Computer with Business Management (UK)', experience: 1 },
 	];
 	const languagesChartData = [
-		{ skill: 'Burmese (Native)', experience: 4 },
-		{ skill: 'English (B2)', experience: 3 },
-		{ skill: 'Japanese (N4)', experience: 1 },
+		{ skill: 'Burmese', experience: 4 },
+		{ skill: 'English', experience: 3 },
 	];
 	const softSkillChartData = [
 		{ skill: 'Fast Learning', experience: 8 },
 		{ skill: 'Team Work', experience: 7 },
-		{ skill: 'Leadership', experience: 6.5 },
-		{ skill: 'Followership', experience: 6 },
+		{ skill: 'Project Leadership', experience: 6.5 },
 		{ skill: 'Problem Solving', experience: 7 },
 		{ skill: 'Patience', experience: 6 },
-		{ skill: 'Liability', experience: 8 },
+		{ skill: 'Responsibility', experience: 8 },
 		{ skill: 'Socialization', experience: 5 },
-		{ skill: 'Emotion Quotient', experience: 7 },
-		{ skill: 'Intelligence Quotient', experience: 7 },
+		{ skill: 'Flexibility', experience: 7 },
+		{ skill: 'Corporative', experience: 7 },
 	];
 	const chartConfig = {
 		experience: {
@@ -117,7 +105,6 @@ export default function HomeSectionFour() {
 				return '';
 			case 'soft-skills':
 				return '';
-
 			default:
 				return '';
 		}
@@ -393,13 +380,18 @@ export default function HomeSectionFour() {
 									<RadarChart data={menuSelector(activeMenu)}>
 										<ChartTooltip
 											cursor={false}
-											content={<CustomTooltip />}
+											content={
+												<CustomTooltip
+													active={undefined}
+													payload={undefined}
+												/>
+											}
 										/>
 										<PolarAngleAxis dataKey='skill' />
 										<PolarGrid />
 										<Radar
 											dataKey='experience'
-											fill='var(--color-experience)'
+											fill='var(--primary)'
 											fillOpacity={0.6}
 											dot={(dotProps) => {
 												const { cx, cy, payload } = dotProps;
@@ -413,7 +405,7 @@ export default function HomeSectionFour() {
 														fill={
 															isActive
 																? '#f59e0b'
-																: 'var(--color-experience)'
+																: 'var(--primary)'
 														}
 														cursor='pointer'
 														onClick={() =>
@@ -431,7 +423,9 @@ export default function HomeSectionFour() {
 								<ChartContainer
 									config={chartConfig}
 									className={`w-full`}
-									style={{ height: menuSelector(activeMenu).length * 50 }}>
+									style={{
+										height: menuSelector(activeMenu).length * 50,
+									}}>
 									<BarChart
 										accessibilityLayer
 										data={menuSelector(activeMenu)}
@@ -452,7 +446,12 @@ export default function HomeSectionFour() {
 										<XAxis dataKey='experience' type='number' hide />
 										<ChartTooltip
 											cursor={false}
-											content={<CustomTooltip />}
+											content={
+												<CustomTooltip
+													active={undefined}
+													payload={undefined}
+												/>
+											}
 										/>
 										<Bar
 											dataKey='experience'
@@ -471,7 +470,7 @@ export default function HomeSectionFour() {
 															entry.skill ===
 															activeItem
 																? `#F59E0B`
-																: `var(--color-experience)`
+																: `var(--primary)`
 														}
 													/>
 												)

@@ -1,8 +1,7 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { CSSProperties, useEffect, useRef, useState } from 'react';
-import ShadeOrbitContainer from './components/shade_orbit';
+import { useState } from 'react';
+import ShadeOrbitContainer from '../components/shade_orbit';
 import { motion } from 'framer-motion';
 import kotlin from '../../public/kotlin.svg';
 import react_js from '../../public/react_js.svg';
@@ -20,10 +19,17 @@ import socket_io from '../../public/socket_io.svg';
 import apache_server from '../../public/apache_server.svg';
 
 import Image from 'next/image';
-import TypingEffect from './components/typing_effect';
+import TypingEffect from '../components/typing_effect';
 import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
 import { ChevronRight } from 'lucide-react';
+import {
+	TooltipProvider,
+	Tooltip,
+	TooltipContent,
+	TooltipTrigger,
+} from '@/components/shadcn/components/ui/tooltip';
+import { Button } from '@/components/shadcn/components/ui/button';
 
 export default function HomeSectionTwo() {
 	const [contentIndex, setContentIndex] = useState(1);
@@ -39,13 +45,13 @@ export default function HomeSectionTwo() {
 	};
 
 	return (
-		<section className='w-full min-h-scree lg:py-[100px] pt-[30px] '>
+		<section className='w-full lg:py-[100px] pt-[30px]'>
 			<motion.div
 				initial={{ opacity: 0, y: '100%' }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.3, ease: 'easeInOut' }}>
 				<h2 className='lg:ml-[100px] ml-3 lg:text-3xl text-lg text-white font-medium'>
-					Technologies Under The Hook
+					My Tech Stacks
 				</h2>
 			</motion.div>
 			<div className='flex lg:flex-row flex-col lg:justify-start'>

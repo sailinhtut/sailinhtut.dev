@@ -65,7 +65,7 @@ export default function HomeSectionThree() {
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.3, ease: 'easeInOut' }}>
 				<h2 className='ml-3 lg:text-3xl text-lg text-white font-medium '>
-					Timelines Across Journey
+					My Timeline
 				</h2>
 			</motion.div>
 
