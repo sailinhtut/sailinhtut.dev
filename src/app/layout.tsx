@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		siteName: 'Sai Lin Htut',
 		images: [
 			{
-				url: '/sailinhtut.png',
+				url: 'https://sailinhtut.dev/sailinhtut.png',
 				width: 1200,
 				height: 630,
 				alt: 'Sai Lin Htut - Software Engineer',

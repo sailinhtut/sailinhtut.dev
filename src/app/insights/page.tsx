@@ -60,7 +60,7 @@ export default function InsightsPage() {
 		<div>
 			<NavBar active={1} />
 			<div className='min-h-screen space-y-4'>
-				<div className='w-full pt-[60px] sticky px-5 bg-background top-0 z-30 space-y-4 pb-3'>
+				<div className='w-full pt-[60px]  px-5 bg-background z-30 space-y-4 pb-3'>
 					<div className='flex flex-col sm:flex-row sm:items-center gap-3'>
 						<Input
 							type='text'
@@ -107,7 +107,7 @@ export default function InsightsPage() {
 												alt={insight.title}
 												className='w-full h-[130px] object-cover'
 											/>
-											<p className='text-lg md:text-2xl font-semibold'>
+											<p className='text-lg md:text-2xl font-semibold line-clamp-1'>
 												{insight.title}
 											</p>
 											<div className='h-[180px] flex flex-col justify-center'>

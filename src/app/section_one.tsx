@@ -56,7 +56,7 @@ export default function HomeSectionOne() {
 							speed={15}
 							onTyped={() => markedTyped(1)}
 						/>
-						<Link href='/service'>
+						<Link href='/services'>
 							<Button
 								className={`mt-5 lg:px-3 transition-all duration-300 ${
 									typed === 1
@@ -85,7 +85,7 @@ export default function HomeSectionOne() {
 							speed={15}
 							onTyped={() => markedTyped(2)}
 						/>
-						<Link href='/service'>
+						<Link href='/services'>
 							<Button
 								className={`mt-5 lg:px-3 transition-all duration-300 ${
 									typed === 2
@@ -114,7 +114,7 @@ export default function HomeSectionOne() {
 							speed={15}
 							onTyped={() => markedTyped(3)}
 						/>
-						<Link href='/service'>
+						<Link href='/services'>
 							<Button
 								className={`mt-5 lg:px-3 transition-all duration-300 ${
 									typed === 3
@@ -143,7 +143,7 @@ export default function HomeSectionOne() {
 							speed={15}
 							onTyped={() => markedTyped(4)}
 						/>
-						<Link href='/service'>
+						<Link href='/services'>
 							<Button
 								className={`mt-5 lg:px-3 transition-all duration-300 ${
 									typed === 4

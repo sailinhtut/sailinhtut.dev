@@ -52,7 +52,7 @@ export default function ProjectDetail({ id }: { id: string }) {
 				<Button
 					variant='outline'
 					onClick={() => router.push('/projects')}
-					className='mb-4'>
+					className='mb-4 mt-5'>
 					&larr; Back
 				</Button>
 

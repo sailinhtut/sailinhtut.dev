@@ -5,6 +5,7 @@ import { Button } from '@/components/shadcn/components/ui/button';
 import NavBar from '@/components/navbar';
 import Link from 'next/link';
 import Footer from '@/components/footer';
+import { useEffect } from 'react';
 
 const services = [
 	{
@@ -47,9 +48,13 @@ const services = [
 ];
 
 export default function ServicesPage() {
+	useEffect(() => {
+		document.title = 'Development Pricing';
+	}, []);
+
 	return (
 		<div>
-			<NavBar active={3}/>
+			<NavBar active={3} />
 			<div className='mt-[60px] min-h-screen max-w-6xl mx-auto px-4 py-12'>
 				<div className='text-center mb-12'>
 					<h1 className='text-xl lg:text-4xl font-bold mb-2 text-white'>

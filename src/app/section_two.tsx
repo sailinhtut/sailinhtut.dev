@@ -277,7 +277,7 @@ export default function HomeSectionTwo() {
 										className='mt-5'
 									/>
 									<div className='w-full flex flex-gap justify-between'>
-										<Link href='/service'>
+										<Link href='/services'>
 											<Button
 												className={`mt-5 lg:px-3 transition-all duration-300 ${
 													typed === 1
@@ -356,7 +356,7 @@ export default function HomeSectionTwo() {
 									/>
 
 									<div className='w-full flex flex-gap justify-between'>
-										<Link href='/service'>
+										<Link href='/services'>
 											<Button
 												className={`mt-5 lg:px-3 transition-all duration-300 ${
 													typed === 2
@@ -429,7 +429,7 @@ export default function HomeSectionTwo() {
 										className='mt-5'
 									/>
 									<div className='w-full flex flex-gap justify-between'>
-										<Link href='/service'>
+										<Link href='/services'>
 											<Button
 												className={`mt-5 lg:px-3 transition-all duration-300 ${
 													typed === 3
@@ -498,7 +498,7 @@ export default function HomeSectionTwo() {
 										className='mt-5'
 									/>
 									<div className='w-full flex flex-gap justify-between'>
-										<Link href='/service'>
+										<Link href='/services'>
 											<Button
 												className={`mt-5 lg:px-3 transition-all duration-300 ${
 													typed === 4

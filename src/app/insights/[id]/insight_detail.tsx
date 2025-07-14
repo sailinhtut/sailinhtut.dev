@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -42,7 +43,7 @@ export default function InsightDetail({ id }: { id: string }) {
 				<Button
 					variant='outline'
 					onClick={() => router.push('/insights')}
-					className='mb-4'>
+					className='mb-4 mt-5'>
 					&larr; Back
 				</Button>
 

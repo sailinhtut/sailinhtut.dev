@@ -19,34 +19,27 @@ import { ChartConfig, ChartContainer, ChartTooltip } from '@/components/shadcn/c
 
 export default function HomeSectionFour() {
 	const webDevelopmentChartData = [
-		{ skill: 'Next JS', experience: 0.4 },
-		{ skill: 'React JS', experience: 1.5 },
+		{ skill: 'React JS', experience: 2 },
+		{ skill: 'Next JS', experience: 1.3 },
 		{ skill: 'Express JS', experience: 0.4 },
-		{ skill: 'Laravel (PHP)', experience: 2.2 },
+		{ skill: 'Laravel', experience: 2.2 },
 		{ skill: 'Vue JS', experience: 0.3 },
-		{ skill: 'Flutter Web', experience: 1.3 },
-		{ skill: 'Apache Server', experience: 1.5 },
-		{ skill: 'Nginx Server', experience: 0.3 },
+		{ skill: 'Flutter Web', experience: 2 },
+		{ skill: 'Docker', experience: 1.5 },
 		{ skill: 'MySQL', experience: 2 },
-		{ skill: 'MongoDB', experience: 0.4 },
-		{ skill: 'Socket.io', experience: 0.3 },
+		{ skill: 'MongoDB', experience: 1.2 },
+		{ skill: 'Socket.io', experience: 0.4 },
 		{ skill: 'Amazon S3', experience: 0.3 },
-		{ skill: 'Google Cloud', experience: 0.8 },
-		{ skill: 'Z.com (Domain & Hosting)', experience: 1.5 },
-		{ skill: 'Digital Ocean (Domain & Hosting)', experience: 0.5 },
-		{ skill: 'Stripe Payment API', experience: 0.3 },
+		{ skill: 'Google Cloud', experience: 1.5 },
 	];
 	const mobileDevelopmentChartData = [
-		{ skill: 'Android (Java)', experience: 0.5 },
-		{ skill: 'Flutter Android', experience: 3 },
-		{ skill: 'Material Design', experience: 2.8 },
-		{ skill: 'Fluent Design', experience: 2.8 },
-		{ skill: 'Firebase', experience: 2.3 },
-		{ skill: 'GetX', experience: 2.3 },
+		{ skill: 'Android (Java)', experience: 0.8 },
+		{ skill: 'Flutter', experience: 3 },
+		{ skill: 'React Native', experience: 0.5 },
 	];
 	const desktopChartData = [
-		{ skill: 'Electron JS', experience: 1 },
-		{ skill: 'Flutter Desktop', experience: 0.8 },
+		{ skill: 'Electron JS', experience: 1.5 },
+		{ skill: 'Flutter Desktop', experience: 1 },
 		{ skill: 'Python Tkinter and QT', experience: 0.3 },
 	];
 	const educationChartData = [

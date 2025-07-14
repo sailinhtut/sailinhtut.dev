@@ -59,7 +59,7 @@ export default function ProjectsPage() {
 		<div>
 			<NavBar active={2} />
 			<div className='min-h-screen space-y-4'>
-				<div className='w-full pt-[60px] sticky px-5 bg-background top-0 z-30 space-y-4 pb-3'>
+				<div className='w-full pt-[60px] px-5 bg-background  z-30 space-y-4 pb-3'>
 					<div className='flex flex-col sm:flex-row sm:items-center gap-3'>
 						<Input
 							type='text'
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
 									<Card
 										className='
 										bg-white/5 text-white transition-all duration-300 ease-in-out
-										hover:scale-[1.03] hover:shadow-lg hover:bg-white/10 cursor-pointer py-3'>
+										hover:scale-[1.03] hover:shadow-lg hover:bg-white/10 cursor-pointer py-5'>
 										<CardContent className='p-5 space-y-3 py-0'>
 											<p className='text-lg md:text-xl font-semibold'>
 												{project.title}

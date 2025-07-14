@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://sailinhtut.dev/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://sailinhtut.dev/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2025-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sailinhtut.dev/insights</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sailinhtut.dev/projects</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sailinhtut.dev/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-07-14</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sailinhtut.dev/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-07-14</lastmod>
+  </url>
+
+</urlset>
