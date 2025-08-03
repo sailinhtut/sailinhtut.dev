@@ -1,6 +1,7 @@
 import { Toaster } from '@/components/shadcn/components/ui/sonner';
 import '../css/globals.css';
 import { Metadata } from 'next';
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
 	title: 'Sai Lin Htut',
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body>
 				{children}
 				<Toaster theme='dark' position='bottom-right' />
+				<Analytics/>
 			</body>
 		</html>
 	);
