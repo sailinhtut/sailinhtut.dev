@@ -51,7 +51,7 @@ export default function HomeSectionOne() {
 
 						<TypingEffect
 							text='Innovate your streamline indea and deliver your cutting-edge
-						software globally with Mr.Sai Lin Htut. I am grateful to be
+						software globally with Sai Lin Htut. I am grateful to be
 						apart of your dream journey.'
 							speed={15}
 							onTyped={() => markedTyped(1)}
